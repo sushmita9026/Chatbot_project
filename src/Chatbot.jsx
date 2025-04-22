@@ -19,7 +19,7 @@ function Chatbot() {
         const typeBotResponse = async (response, newMessages) => {
           for (let i = 0; i < response.length; i++) {
             setMessages(prev => [...newMessages, { text: response.slice(0, i + 1), user: false }]);
-            await new Promise(resolve => setTimeout(resolve, 50)); 
+            await new Promise(resolve => setTimeout(resolve, 50));  
           }
         };
         typeBotResponse(botResponse, newMessages);
@@ -55,9 +55,3 @@ function Chatbot() {
   );
 }
 export default Chatbot;
-
-
-
-
-
-
